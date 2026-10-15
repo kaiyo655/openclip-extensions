@@ -29,10 +29,22 @@
         "ja": "EdgeOne Makers API キー"
       },
       "type": "secret"
+    },
+    {
+      "identifier": "perParagraph",
+      "label": {
+        "en": "Detect each paragraph separately",
+        "zh-Hans": "逐段检测",
+        "zh-Hant": "逐段檢測",
+        "fr": "Analyser chaque paragraphe séparément",
+        "ja": "段落ごとに検出"
+      },
+      "type": "boolean",
+      "default": "false"
     }
   ],
   "action": {
-    "id": "zhuque",
+    "id": "detect",
     "title": {
       "en": "Zhuque AI Detection",
       "zh-Hans": "朱雀 AI 检测",
@@ -41,65 +53,22 @@
       "ja": "朱雀 AI 検出"
     },
     "icon": "icon.svg",
-    "type": "group",
-    "subActions": [
-      {
-        "id": "detect",
-        "title": {
-          "en": "Detect AI Text",
-          "zh-Hans": "检测 AI 生成内容",
-          "zh-Hant": "檢測 AI 生成內容",
-          "fr": "Détecter le texte IA",
-          "ja": "AI 生成テキストを検出"
-        },
-        "icon": "icon.svg",
-        "type": "javascript",
-        "script": "main.js",
-        "async": true,
-        "loading": true,
-        "loadingMessage": {
-          "en": "Detecting with Zhuque…",
-          "zh-Hans": "朱雀检测中…",
-          "zh-Hant": "朱雀檢測中…",
-          "fr": "Détection avec Zhuque…",
-          "ja": "朱雀で検出中…"
-        },
-        "requirements": {
-          "requiredOptions": ["apiKey"]
-        },
-        "output": "text",
-        "result": "preview",
-        "keywords": ["detect", "ai detection", "aigc", "检测", "AI 检测", "檢測", "détecter", "検出"]
-      },
-      {
-        "id": "paragraphs",
-        "title": {
-          "en": "Detect by Paragraph",
-          "zh-Hans": "逐段检测",
-          "zh-Hant": "逐段檢測",
-          "fr": "Détecter par paragraphe",
-          "ja": "段落ごとに検出"
-        },
-        "icon": "text.alignleft",
-        "type": "javascript",
-        "script": "paragraphs.js",
-        "async": true,
-        "loading": true,
-        "loadingMessage": {
-          "en": "Detecting each paragraph…",
-          "zh-Hans": "正在逐段检测…",
-          "zh-Hant": "正在逐段檢測…",
-          "fr": "Détection de chaque paragraphe…",
-          "ja": "段落ごとに検出中…"
-        },
-        "menuRelevance": "\\n",
-        "requirements": {
-          "requiredOptions": ["apiKey"]
-        },
-        "output": "text",
-        "result": "preview",
-        "keywords": ["paragraph", "逐段", "段落", "paragraphe"]
-      }
-    ]
+    "type": "javascript",
+    "script": "main.js",
+    "async": true,
+    "loading": true,
+    "loadingMessage": {
+      "en": "Detecting with Zhuque…",
+      "zh-Hans": "朱雀检测中…",
+      "zh-Hant": "朱雀檢測中…",
+      "fr": "Détection avec Zhuque…",
+      "ja": "朱雀で検出中…"
+    },
+    "requirements": {
+      "requiredOptions": ["apiKey"]
+    },
+    "output": "text",
+    "result": "preview",
+    "keywords": ["detect", "ai detection", "aigc", "检测", "AI 检测", "檢測", "détecter", "検出"]
   }
 }

@@ -4,13 +4,13 @@ Check whether the selected text was written by AI, using Tencent's Zhuque (朱�
 
 ## Features
 
-- **Detect AI Text**: scores the whole selection and shows the share of AI-generated, possibly-AI and human-written content as bars with percentages, plus a one-line verdict.
-- **Detect by Paragraph**: labels each paragraph separately (AI / possibly AI / human, with confidence). It appears only when the selection has more than one line.
+- Scores the selection and shows the share of AI-generated, possibly-AI and human-written content as bars with percentages, plus a one-line verdict.
+- Optional per-paragraph mode labels each paragraph separately (AI / possibly AI / human, with confidence).
 - Each result shows how many tokens of your free quota the request used.
 
 ## Usage Examples
 
-Select an essay, a reply or an article, open the **Zhuque AI Detection** menu and choose **Detect AI Text**. The result card looks like this:
+Select an essay, a reply or an article, and choose **Zhuque AI Detection**. The result card looks like this:
 
 ```
 Zhuque AI Detection
@@ -35,7 +35,8 @@ The verdict line is a summary of the percentages (AI share of 50% or more means 
 
 A newly created key can take 1–2 minutes to start working.
 
-- **EdgeOne Makers API Key**: stored by OpenClip as a secret in a local file readable only by your user account. It is sent only to the EdgeOne gateway, in the request's `Authorization` header.
+- **EdgeOne Makers API Key** (required): stored by OpenClip as a secret in a local file readable only by your user account. It is sent only to the EdgeOne gateway, in the request's `Authorization` header.
+- **Detect each paragraph separately** (off by default): when on, the result also lists every paragraph with its own label and confidence.
 
 ## Requirements
 
