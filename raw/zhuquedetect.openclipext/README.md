@@ -6,7 +6,6 @@ Check whether the selected text was written by AI, using Tencent's Zhuque (æœ±é›
 
 - **Detect AI Text**: scores the whole selection and shows the share of AI-generated, possibly-AI and human-written content as bars with percentages, plus a one-line verdict.
 - **Detect by Paragraph**: labels each paragraph separately (AI / possibly AI / human, with confidence). It appears only when the selection has more than one line.
-- **API Documentation** and **View Usage & API Keys**: open the official API docs and the EdgeOne Makers console in your browser.
 - Each result shows how many tokens of your free quota the request used.
 
 ## Usage Examples

@@ -99,40 +99,6 @@
         "output": "text",
         "result": "preview",
         "keywords": ["paragraph", "逐段", "段落", "paragraphe"]
-      },
-      {
-        "id": "docs",
-        "title": {
-          "en": "API Documentation",
-          "zh-Hans": "API 文档",
-          "zh-Hant": "API 文件",
-          "fr": "Documentation de l'API",
-          "ja": "API ドキュメント"
-        },
-        "icon": "book",
-        "type": "url",
-        "url": "https://cloud.tencent.com/document/product/1552/137539",
-        "requirements": {
-          "requiresSelection": false
-        },
-        "keywords": ["docs", "api", "文档", "文件", "ドキュメント"]
-      },
-      {
-        "id": "usage",
-        "title": {
-          "en": "View Usage & API Keys",
-          "zh-Hans": "查看用量与 API Key",
-          "zh-Hant": "查看用量與 API Key",
-          "fr": "Consommation et clés API",
-          "ja": "使用量と API キー"
-        },
-        "icon": "chart.bar",
-        "type": "url",
-        "url": "https://console.cloud.tencent.com/edgeone/makers?tab=models&subTab=models",
-        "requirements": {
-          "requiresSelection": false
-        },
-        "keywords": ["usage", "quota", "api key", "用量", "额度", "使用量"]
       }
     ]
   }
