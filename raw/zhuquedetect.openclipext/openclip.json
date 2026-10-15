@@ -1,0 +1,139 @@
+{
+  "identifier": "com.openclip.zhuquedetect",
+  "name": {
+    "en": "Zhuque AI Detection",
+    "zh-Hans": "朱雀 AI 检测",
+    "zh-Hant": "朱雀 AI 檢測",
+    "fr": "Détection IA Zhuque",
+    "ja": "朱雀 AI 検出"
+  },
+  "description": {
+    "en": "Check whether the selected text was written by AI with Tencent's Zhuque AIGC detection model.",
+    "zh-Hans": "使用腾讯朱雀 AIGC 检测模型，判断选中文本是否由 AI 生成。",
+    "zh-Hant": "使用騰訊朱雀 AIGC 檢測模型，判斷選取文字是否由 AI 生成。",
+    "fr": "Vérifiez si le texte sélectionné a été rédigé par une IA avec le modèle de détection AIGC Zhuque de Tencent.",
+    "ja": "Tencent の朱雀 AIGC 検出モデルで、選択したテキストが AI によって生成されたかを判定します。"
+  },
+  "version": "1.0.0",
+  "minOpenClipVersion": "1.1.0",
+  "author": "OpenClip Team",
+  "keywords": ["zhuque", "aigc", "ai detection", "ai detector", "朱雀", "AI 检测", "AIGC 检测"],
+  "options": [
+    {
+      "identifier": "apiKey",
+      "label": {
+        "en": "EdgeOne Makers API Key",
+        "zh-Hans": "EdgeOne Makers API Key",
+        "zh-Hant": "EdgeOne Makers API Key",
+        "fr": "Clé API EdgeOne Makers",
+        "ja": "EdgeOne Makers API キー"
+      },
+      "type": "secret"
+    }
+  ],
+  "action": {
+    "id": "zhuque",
+    "title": {
+      "en": "Zhuque AI Detection",
+      "zh-Hans": "朱雀 AI 检测",
+      "zh-Hant": "朱雀 AI 檢測",
+      "fr": "Détection IA Zhuque",
+      "ja": "朱雀 AI 検出"
+    },
+    "icon": "icon.svg",
+    "type": "group",
+    "subActions": [
+      {
+        "id": "detect",
+        "title": {
+          "en": "Detect AI Text",
+          "zh-Hans": "检测 AI 生成内容",
+          "zh-Hant": "檢測 AI 生成內容",
+          "fr": "Détecter le texte IA",
+          "ja": "AI 生成テキストを検出"
+        },
+        "icon": "icon.svg",
+        "type": "javascript",
+        "script": "main.js",
+        "async": true,
+        "loading": true,
+        "loadingMessage": {
+          "en": "Detecting with Zhuque…",
+          "zh-Hans": "朱雀检测中…",
+          "zh-Hant": "朱雀檢測中…",
+          "fr": "Détection avec Zhuque…",
+          "ja": "朱雀で検出中…"
+        },
+        "requirements": {
+          "requiredOptions": ["apiKey"]
+        },
+        "output": "text",
+        "result": "preview",
+        "keywords": ["detect", "ai detection", "aigc", "检测", "AI 检测", "檢測", "détecter", "検出"]
+      },
+      {
+        "id": "paragraphs",
+        "title": {
+          "en": "Detect by Paragraph",
+          "zh-Hans": "逐段检测",
+          "zh-Hant": "逐段檢測",
+          "fr": "Détecter par paragraphe",
+          "ja": "段落ごとに検出"
+        },
+        "icon": "text.alignleft",
+        "type": "javascript",
+        "script": "paragraphs.js",
+        "async": true,
+        "loading": true,
+        "loadingMessage": {
+          "en": "Detecting each paragraph…",
+          "zh-Hans": "正在逐段检测…",
+          "zh-Hant": "正在逐段檢測…",
+          "fr": "Détection de chaque paragraphe…",
+          "ja": "段落ごとに検出中…"
+        },
+        "menuRelevance": "\\n",
+        "requirements": {
+          "requiredOptions": ["apiKey"]
+        },
+        "output": "text",
+        "result": "preview",
+        "keywords": ["paragraph", "逐段", "段落", "paragraphe"]
+      },
+      {
+        "id": "docs",
+        "title": {
+          "en": "API Documentation",
+          "zh-Hans": "API 文档",
+          "zh-Hant": "API 文件",
+          "fr": "Documentation de l'API",
+          "ja": "API ドキュメント"
+        },
+        "icon": "book",
+        "type": "url",
+        "url": "https://cloud.tencent.com/document/product/1552/137539",
+        "requirements": {
+          "requiresSelection": false
+        },
+        "keywords": ["docs", "api", "文档", "文件", "ドキュメント"]
+      },
+      {
+        "id": "usage",
+        "title": {
+          "en": "View Usage & API Keys",
+          "zh-Hans": "查看用量与 API Key",
+          "zh-Hant": "查看用量與 API Key",
+          "fr": "Consommation et clés API",
+          "ja": "使用量と API キー"
+        },
+        "icon": "chart.bar",
+        "type": "url",
+        "url": "https://console.cloud.tencent.com/edgeone/makers?tab=models&subTab=models",
+        "requirements": {
+          "requiresSelection": false
+        },
+        "keywords": ["usage", "quota", "api key", "用量", "额度", "使用量"]
+      }
+    ]
+  }
+}
